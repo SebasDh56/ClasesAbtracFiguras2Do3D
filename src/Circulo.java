@@ -1,14 +1,15 @@
 public class Circulo extends Figura {
-    double radio;
-    Punto centro;
+    private double radio;
 
-    @Override
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+
     public double calcularPerimetro() {
         return 2 * Math.PI * radio;
     }
 
-    @Override
     public double calcularArea() {
-        return Math.PI * Math.pow(radio, 2);
+        return Math.PI * radio * radio;
     }
 }
